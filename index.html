@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/bg-video.mp4" type="video/mp4">
+    </video>
+
+    <h1>WEATHER APP</h1>
+
+   
+    <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button id="searchBtn">🔍</button>
+    </div>
+    
+    
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>⏳loading weather...</p>
+    </div>
+
+    <div class="unit-toggle">
+        <button id="celsiusBtn">°C</button>
+        <button id="fahrenheitBtn">°F</button>
+    </div>
+
+    <div id="weather"></div>
+
+    <div class="forecast-section">
+        <h2>📅5-Day Forecast</h2>
+        <div id="forecastContainer" class="forecast-container">
+
+        </div>
+    </div>
+   
+
+<script src="script.js"></script>
+</body>
+</html>
