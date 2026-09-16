@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEATHER APP</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
-        <source src="videos/bg-video.mp4" type="video/mp4">
+        <source src="videos/bg-video (3).mp4" type="video/mp4">
     </video>
 
-    <h1>WEATHER APP</h1>
-
-   
-    <div class="search-container">
-        <input type="text" id="cityInput" placeholder="Enter city">
-        <button id="searchBtn">🔍</button>
-    </div>
-    
-    
+    <h1>🌤️<span class="highlight-text">WEATHERLY</span></h1>
 
     <div id="loading" class="loading">
         <div class="spinner"></div>
@@ -27,21 +19,205 @@
     </div>
 
     <div class="unit-toggle">
-        <button id="celsiusBtn">°C</button>
-        <button id="fahrenheitBtn">°F</button>
+    <button id="celsiusBtn">°C</button>
+    <button id="fahrenheitBtn">°F</button>
+</div>
+
+<!-- HOME PAGE -->
+<div id="homePage">
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h2>☁️ Weather, <span class="highlight-text">wherever you are.</span></h2>
+        <p>Search for a city or use your location to check the latest weather.</p>
+
+        <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Enter city...">
+        <button id="searchBtn">🔍</button>
+        <button id="locationBtn">📍 My Location</button>
     </div>
+     </section>
 
-    <div id="weather"></div>
+    <!-- Explore Weather -->
+    <section class="explore-section">
+        <h2>🌍 Explore<span class="highlight-text">Weather</span></h2>
+        <p>Discover the weather in different cities around the world.</p>
 
-    <div class="forecast-section">
-        <h2>📅5-Day Forecast</h2>
-        <div id="forecastContainer" class="forecast-container">
+        <div class="city-cards">
+
+            <div class="city-card" data-city="Cape Town">
+                <div class="city-info">
+                    <h3>Cape Town</h3>
+                    <p>South Africa</p>
+
+                    <div class="city-weather-preview">
+                        <span class="city-weather-icon">☀️</span>
+                        <span class="city-description">Clear</span>
+                    </div>
+                    <strong class="city-temp">24°C</strong>
+                </div>
+                </div>
+
+            <div class="city-card" data-city="Johannesburg">
+                <div class="city-info">
+                    <h3>Johannesburg</h3>
+                    <p>South Africa</p>
+                 
+                    <div class="city-weather-preview">
+                        <span class="city-weather-icon">☁️</span>
+                        <span class="city-description">Cloudy</span>
+                    </div>
+                    <strong class="city-temp">18°C</strong>
+                </div>
+                </div>
+
+            <div class="city-card" data-city="London">
+                <div class="city-info">
+                    <h3>London</h3>
+                    <p>United Kingdom</p>
+
+                     <div class="city-weather-preview">
+                    <span class="city-weather-icon">🌧️</span>
+                    <span class="city-description">Rainy</span>
+                </div>
+                <strong class="city-temp">12°C</strong>
+            </div>
+            </div>
+
+            
+            <div class="city-card" data-city="Tokyo">
+                <div class="city-info">
+                    <h3>Tokyo</h3>
+                    <p>Japan</p>
+
+                    <div class="city-weather-preview">
+                    <span class="city-weather-icon">☀️</span>
+                    <span class="city-description">Sunny</span>
+                </div>
+                <strong class="city-temp">22°C</strong>
+             </div>
+         </div>
+                
+        
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <h2>✨ What You Can See</h2>
+        <p>Explore the various weather details and forecasts available.</p>
+
+        <div class="feature-cards">
+
+            <div class="feature-card">
+                <span>🌡️</span>
+                <h3>Temperature</h3>
+                <p>Current temperature and feels like information.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>🌧️</span>
+                <h3>Rain Probability</h3>
+                <p>See the chance of rain throughout the day.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>💨</span>
+                <h3>Wind Speed</h3>
+                <p>Keep track of current wind conditions.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>📅</span>
+                <h3>5-Day Forecast</h3>
+                <p>Plan ahead with the upcoming weather forecast.</p>
+            </div>
 
         </div>
+    </section>
+
+    <!-- Dynamic Weather -->
+    <section class="dynamic-weather-section">
+        <h2>🎥 Weather That Changes <span class="highlight-text">With You</span></h2>
+        
+
+        <p>
+            Our background changes according to the current weather conditions
+          -from clear skies to thunderstorms, experience the weather visually.
+        </p>
+
+        <div class="weather-video-showcase">
+
+            <div class="video-preview">
+                <video autoplay muted loop>
+                    <source src="videos/clearsky.mp4" type="video/mp4">
+                </video>
+                <span>☀️ Clear</span>
+            </div>
+
+            <div class="video-preview">
+                <video autoplay muted loop>
+                    <source src="videos/clouds.mp4" type="video/mp4">
+                </video>
+                <span>☁️ Clouds</span>
+            </div>
+
+            <div class="video-preview">
+                <video autoplay muted loop>
+                    <source src="videos/rain-2.mp4" type="video/mp4">
+                </video>
+                <span>🌧️ Rain</span>
+            </div>
+
+            <div class="video-preview">
+                <video autoplay muted loop>
+                    <source src="videos/snow.mp4" type="video/mp4">
+                </video>
+                <span>❄️ Snow</span>
+            </div>
+
+            <div class="video-preview">
+                <video autoplay muted loop>
+                    <source src="videos/thunderstorms.mp4" type="video/mp4">
+                </video>
+                <span>⛈️ Storm</span>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- WEATHER RESULTS -->
+
+<div class="weather-results">
+
+    <!-- BACK HOME BUTTON -->
+    <div class="back-home-container">
+        <button id="backHomeBtn" class="back-home-btn">
+            ← Back Home
+        </button>
     </div>
-    <footer>Coded By Naomi.T</footer>
+
+    <!-- WEATHER CARDS -->
+    <div class="weather-layout" id="weatherLayout">
+
+        <!-- LEFT: CURRENT WEATHER -->
+        <div id="weather"></div>
+
+        <!-- RIGHT: 5-DAY FORECAST -->
+        <div class="forecast-section">
+            <div id="forecastContainer" class="forecast-container"></div>
+        </div>
+
+    </div>
+
+</div>
+    
    
 
 <script src="script.js"></script>
+<footer>
+    <span>💙Coded By Naomi.T</span>
+</footer>
 </body>
 </html>
